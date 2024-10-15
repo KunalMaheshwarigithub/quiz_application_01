@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-container">
+        <!-- Category Selection Section -->
+        <div id="category-selection">
+            <h1 class="title">Quiz Application</h1>
+            <h2 class="subtitle">Select a Category</h2>
+            <div class="category-buttons">
+                <button class="btn" onclick="startQuiz('Math')">Math</button>
+                <button class="btn" onclick="startQuiz('Science')">Science</button>
+                <button class="btn" onclick="startQuiz('History')">History</button>
+                <button class="btn" onclick="startQuiz('Computer Science')">Computer Science</button>
+                <button class="btn" onclick="startQuiz('Reasoning')">Reasoning</button>
+                <button class="btn" onclick="startQuiz('English')">English</button>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz-section" class="hidden">
+            <h2 id="quiz-category" class="title"></h2>
+            <p class="timer">Time Left: <span id="time">30</span> seconds</p>
+            <div id="question-container" class="question"></div>
+            <div id="answers-container" class="answers"></div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div id="feedback-section" class="hidden">
+            <h2 class="title">Quiz Complete!</h2>
+            <p>Your Score: <span id="final-score"></span></p>
+            <p>High Score: <span id="high-score"></span></p>
+            <div id="feedback-box"></div>
+            <button class="btn" onclick="restartQuiz()">Restart</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
